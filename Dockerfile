@@ -60,6 +60,8 @@ COPY conf/nginx/nginx-https.template /etc/nginx
 RUN mkdir -p /etc/ssl/live
 COPY conf/ssl/fullchain.pem /etc/ssl/live/
 COPY conf/ssl/privkey.pem /etc/ssl/live/
+COPY conf/ssl/fullchain.pem /etc/ssl/
+COPY conf/ssl/privkey.pem /etc/ssl/
 RUN mkdir -p /var/www/html
 COPY conf/nginx/index.html /var/www/html/
 

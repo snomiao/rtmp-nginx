@@ -5,9 +5,8 @@ services:
     build:
       dockerfile: Dockerfile
       context: .
-    image: rtmp-nginx:${TAG}
-    hostname: rtmp-nginx
-    container_name: rtmp-nginx
+    image: rtmp-nginx
+    hostname: ${RTMP_HOSTNAME}
     environment:
       - NGINX_HTTP_PORT=${NGINX_HTTP_PORT}
       - NGINX_HTTPS_PORT=${NGINX_HTTPS_PORT}
