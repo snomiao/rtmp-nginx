@@ -14,6 +14,7 @@ RTMP1_URL=[YouTube or other stream URL]
 RTMP1_KEY=[Your stream key, keep this secret!]
 RTMP2_URL=[Second streaming service URL]
 RTMP2_KEY=[Second streaming service key]
+RTMP_APP=live
 RTMP_PASS=[A string that will be the password for OBS or other software]
 SSL_CERT_PATH=/etc/ssl/fullchain.pem
 SSL_KEY_PATH=/etc/ssl/privkey.pem
@@ -30,7 +31,16 @@ Service = Custom...
 Server = rtmp://[hostname or IP]/live
 Stream Key = streamer?pwd=[Your Password]
 
-References:
+## Usage of DJI MIMO
+
+Connect your camera -> LiveStreaming -> RTMP
+
+Wifi = ... fill your wifi SSID and password
+RTMP URL = rtmps://[hostname or IP]/live
+
+Note: while unable to use password in DJI MIMO. For better security, rename your RTMP_APP to a secret string and use RTMPS only
+
+## References:
 
 https://www.scaleway.com/en/docs/setup-rtmp-streaming-server/ - Huge thanks here for the authentication part.
 https://smartshitter.com/musings/2018/06/nginx-rtmp-streaming-with-slightly-improved-authentication/ - Interesting take on authentication.

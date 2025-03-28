@@ -18,7 +18,7 @@ rtmp {
                 ping 30s;
                 notify_method get;
 
-                application ${RTMP_PASS} {
+                application ${RTMP_APP} {
                         live on;
                         on_publish http://127.0.0.1:${NGINX_HTTP_PORT}/auth;
                         record off;
