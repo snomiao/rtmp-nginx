@@ -5,10 +5,10 @@ server {
     server_name ${NGINX_SERVERNAME};
 
     location /auth {
-        if ($arg_pwd = '${RTMP_PASS}') {
+        # if ($arg_pwd = '${RTMP_PASS}') {
             return 200;
-        }
-            return 401;
+        # }
+        #     return 401;
     }
 
     root ${NGINX_ROOT};

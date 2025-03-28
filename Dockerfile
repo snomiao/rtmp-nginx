@@ -1,4 +1,4 @@
-FROM ubuntu:20.04 as compile-image
+FROM ubuntu:20.04 AS compile-image
 
 LABEL maintainer="Paul Asadoorian <paul@psw.io>"
 
@@ -35,7 +35,7 @@ RUN set -eux; \
     make; \
     make install
 
-FROM ubuntu:20.04 as build-image
+FROM ubuntu:20.04 AS build-image
 
 COPY --from=compile-image /usr/local/nginx /usr/local/nginx
 
