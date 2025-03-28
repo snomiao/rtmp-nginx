@@ -19,11 +19,11 @@ services:
       - SSL_CERT_PATH=${SSL_CERT_PATH}
       - SSL_KEY_PATH=${SSL_KEY_PATH}
     ports:
-      - "80:${NGINX_HTTP_PORT}"
+      - "80:${NGINX_HTTP_PORT}" # http:// info
+      - "1935:${NGINX_RTMP_PORT}" # rtmp:// default port, not recommended
+      - "443:1936" # rtmps:// default port
       # - "443:${NGINX_HTTPS_PORT}"
-      - "1935:${NGINX_RTMP_PORT}"
       # - "1936:1936"
-      - "443:1936"
     expose:
       - "80"
       - "443"
