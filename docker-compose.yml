@@ -1,5 +1,6 @@
 services:
   rtmp-nginx:
+    restart: always
     build:
       dockerfile: Dockerfile
       context: .

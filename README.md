@@ -1,7 +1,8 @@
 # RTMP Proxy
 Docker container for running NGINX as an RTMP proxy for streaming video to multiple services. Complete with SSL and authentication.
 
-# Setup
+## Setup
+
 You will need to build your own .env file and fill out all of the values (including generating SSL certs):
 
 NGINX_HTTP_PORT=8080
@@ -16,6 +17,12 @@ RTMP2_KEY=[Second streaming service key]
 RTMP_PASS=[A string that will be the password for OBS or other software]
 SSL_CERT_PATH=/etc/ssl/fullchain.pem
 SSL_KEY_PATH=/etc/ssl/privkey.pem
+
+Go to [./ssl.sh](ssl.sh), run caddy for your domain certificae
+
+and then run `docker compose up --build` for serving the RTMP proxy server
+
+## Usage of OBS 
 
 In OBS, go to settings -> stream:
 
