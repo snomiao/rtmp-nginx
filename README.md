@@ -1,4 +1,5 @@
 # RTMP Proxy
+
 Docker container for running NGINX as an RTMP proxy for streaming video to multiple services. Complete with SSL and authentication.
 
 ## Setup
@@ -25,7 +26,7 @@ Go to [./ssl.sh](ssl.sh), run caddy for your domain certificae
 
 and then run `docker compose up --build` for serving the RTMP proxy server
 
-## Usage of OBS 
+## Usage of OBS
 
 In OBS, go to settings -> stream:
 
