@@ -51,3 +51,4 @@ ssl/
 
 # ignore caddy data
 caddy_data
+.env
