@@ -24,9 +24,11 @@ rtmp {
                         record off;
                         push ${RTMP1_URL}/${RTMP1_KEY};
                         push ${RTMP2_URL}/${RTMP2_KEY};
+                        
+                        # if necessary
+                        # push ${RTMP3_URL}/${RTMP3_KEY}; 
+                        
                 }
-
-
         }
 }
 
