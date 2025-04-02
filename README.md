@@ -30,15 +30,15 @@ and then run `docker compose up --build` for serving the RTMP proxy server
 
 In OBS, go to settings -> stream:
 
-Service = Custom...
-Server = rtmp://[hostname or IP]/live
-Stream Key = streamer?pwd=[Your Password]
+Service = Custom...  
+Server = rtmp://[hostname or IP]/live  
+Stream Key = streamer?pwd=[Your Password]  
 
 ## Usage of DJI MIMO
 
 Connect your camera -> LiveStreaming -> RTMP
 
-Wifi = ... fill your wifi SSID and password
+Wifi = ... fill your wifi SSID and password  
 RTMP URL = rtmps://[hostname or IP]/live
 
 Note: while unable to use password in DJI MIMO. For better security, rename your RTMP_APP to a secret string and use RTMPS only
